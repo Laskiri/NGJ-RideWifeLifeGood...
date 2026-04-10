@@ -13,8 +13,8 @@
   ],
   "name":"Room1",
   "parent":{
-    "name":"BLANK GAME2",
-    "path":"BLANK GAME2.yyp",
+    "name":"NGJ-RideWife",
+    "path":"NGJ-RideWife.yyp",
   },
   "parentRoom":null,
   "physicsSettings":{

@@ -1,6 +1,6 @@
 {
   "$GMProject":"v1",
-  "%Name":"BLANK GAME2",
+  "%Name":"NGJ-RideWife",
   "AudioGroups":[
     {"$GMAudioGroup":"v1","%Name":"audiogroup_default","exportDir":"","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
   ],
@@ -17,7 +17,7 @@
   "MetaData":{
     "IDEVersion":"2024.14.4.222",
   },
-  "name":"BLANK GAME2",
+  "name":"NGJ-RideWife",
   "resources":[
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
   ],
