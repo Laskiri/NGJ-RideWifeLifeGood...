@@ -42,6 +42,8 @@
     {"id":{"name":"Player","path":"objects/Player/Player.yy",},},
     {"id":{"name":"Fighting","path":"rooms/Fighting/Fighting.yy",},},
     {"id":{"name":"Platformer","path":"rooms/Platformer/Platformer.yy",},},
+    {"id":{"name":"LifeGoodSound","path":"sounds/LifeGoodSound/LifeGoodSound.yy",},},
+    {"id":{"name":"RideWifeSound","path":"sounds/RideWifeSound/RideWifeSound.yy",},},
     {"id":{"name":"invisible_Tiles","path":"sprites/invisible_Tiles/invisible_Tiles.yy",},},
     {"id":{"name":"smallPlatform","path":"sprites/smallPlatform/smallPlatform.yy",},},
     {"id":{"name":"sprAdamIdle","path":"sprites/sprAdamIdle/sprAdamIdle.yy",},},
