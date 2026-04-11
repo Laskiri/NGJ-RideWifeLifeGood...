@@ -1,3 +1,4 @@
+
 // Handle stagger
 if (isStaggered) {
     staggerTime -= 1;

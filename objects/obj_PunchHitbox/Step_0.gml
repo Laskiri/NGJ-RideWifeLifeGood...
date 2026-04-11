@@ -16,6 +16,7 @@ if (hitPlayer != noone && hitPlayer != owner && ds_list_find_index(hasHit, hitPl
     with (hitPlayer) {
         isStaggered = true;
         staggerTime = 30;
+        isPunching = false;
         
         if (punch_owner.x < x) {
             velocity_y = -8;
