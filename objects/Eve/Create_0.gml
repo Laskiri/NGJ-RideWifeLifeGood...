@@ -9,7 +9,8 @@ enum EVE_STATE {
 }
 
 state = EVE_STATE.IDLE;
-attackRange = 120; // Pixels away from Adam to start punching
-retreatRange = 200; // Distance to stop chasing
+attackRange = 120;
+retreatRange = 200;
 baseScale = 7
 moveSpeed = 4
+punchHitboxCreated = false;
