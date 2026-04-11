@@ -38,7 +38,6 @@
     {"id":{"name":"Apple","path":"objects/Apple/Apple.yy",},},
     {"id":{"name":"Eve","path":"objects/Eve/Eve.yy",},},
     {"id":{"name":"EveRide","path":"objects/EveRide/EveRide.yy",},},
-    {"id":{"name":"EveRide","path":"objects/EveRide/EveRide.yy",},},
     {"id":{"name":"obj_PunchHitbox","path":"objects/obj_PunchHitbox/obj_PunchHitbox.yy",},},
     {"id":{"name":"Platform","path":"objects/Platform/Platform.yy",},},
     {"id":{"name":"PlatformCamera","path":"objects/PlatformCamera/PlatformCamera.yy",},},
@@ -75,7 +74,6 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"Fighting","path":"rooms/Fighting/Fighting.yy",},},
     {"roomId":{"name":"Fighting","path":"rooms/Fighting/Fighting.yy",},},
     {"roomId":{"name":"Platformer","path":"rooms/Platformer/Platformer.yy",},},
   ],
