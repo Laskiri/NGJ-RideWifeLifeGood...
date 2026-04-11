@@ -8,3 +8,10 @@ if (place_meeting(x, y + 2, ground)) {
 }
 
 move_and_collide(0, move_y, ground)
+
+// Punch
+if (keyboard_check_pressed(ord("E")) && !isPunching) {
+    isPunching = true;
+    sprite_index = sprAdamPunch;
+    image_index = 0; 
+}
