@@ -3,6 +3,13 @@ if (global.game_state != "fight") exit
 event_inherited();
 
 if (isStaggered) {
+    if (!takeDamageCoolDown) {
+        hp -= 1
+        takeDamageCoolDown = true
+        EveHP.image_index += 1
+        alarm[0] = 120
+    }
+    
     sprite_index = sprEveStag
     image_index = 0
     isBlocking = false;

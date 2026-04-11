@@ -13,3 +13,4 @@ moveSpeed = 8
 isStaggered = false;
 staggerTime = 0;
 velocity_x = 0;
+hp = 3

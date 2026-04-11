@@ -4,6 +4,12 @@ event_inherited()
 
 // If staggered, only handle stagger sprite - don't process input
 if (isStaggered) {
+    if (!takeDamageCoolDown) {
+        hp -= 1
+        takeDamageCoolDown = true
+        AdamHP.image_index += 1
+        alarm[0] = 120
+    }
     sprite_index = sprAdamStag
     image_index = 0
     isBlocking = false;

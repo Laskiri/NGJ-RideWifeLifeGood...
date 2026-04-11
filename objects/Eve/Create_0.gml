@@ -18,3 +18,4 @@ isBlocking = false;
 blockTimer = 0;
 blockChance = 0.3;
 blockDuration = 60;  // 1 second at 60 FPS
+takeDamageCoolDown = false
