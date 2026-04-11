@@ -1,6 +1,17 @@
 
+// Stagger animation - check FIRST before anything else
+show_debug_message("isStaggered: " + string(isStaggered));
+show_debug_message("Current sprite: " + sprite_get_name(sprite_index));
+
 event_inherited()
 
+if (isStaggered) {
+    sprite_index = sprAdamStag
+    image_index = 0
+} else if (sprite_index == sprAdamStag) {
+    sprite_index = sprAdamIdle
+    image_index = 0
+}
 
 // Horizontal Movement 
 xMove = 0
@@ -28,9 +39,6 @@ else {
     }
 }
 
-
-
-
 // Jumping
 if (keyboard_check_pressed(ord("W")) && onGround && !isPunching) {
     isJumping = true
@@ -39,14 +47,26 @@ if (keyboard_check_pressed(ord("W")) && onGround && !isPunching) {
     image_index = 0
 }
 
-// Punch (can punch while jumping, but not while landing on frame 4)
-if (keyboard_check_pressed(ord("E")) && !isPunching) {
+// Punch with hitbox creation
+if (keyboard_check_pressed(ord("E")) && !isPunching && !isStaggered) {
     if (isJumping && image_index >= 3) {
         // Don't punch during landing
     } else {
         isPunching = true
         sprite_index = sprAdamPunch
         image_index = 0
+        punchHitboxCreated = false
+    }
+}
+
+// Create hitbox when animation reaches frame 2-3
+if (isPunching && sprite_index == sprAdamPunch && !punchHitboxCreated) {
+    if (image_index >= 2) {
+        var hitbox_x = x + (image_xscale * 15);
+        var hitbox_y = y - (image_xscale * 7.5);
+        var hitbox = instance_create_layer(hitbox_x, hitbox_y, "Instances", obj_PunchHitbox);
+        hitbox.owner = id;
+        punchHitboxCreated = true;
     }
 }
 

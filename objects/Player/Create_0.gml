@@ -7,3 +7,9 @@ jumpPower = -45;
 onGround = false
 hSpeed = 0
 moveSpeed = 8
+
+
+//Punch related variables
+isStaggered = false;
+staggerTime = 0;
+velocity_x = 0;
