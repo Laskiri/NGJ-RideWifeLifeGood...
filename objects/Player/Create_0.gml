@@ -6,3 +6,4 @@ isJumping = false
 jumpPower = -45;
 onGround = false
 hSpeed = 0
+moveSpeed = 8
