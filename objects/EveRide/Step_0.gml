@@ -1,3 +1,4 @@
+if(appleHit) exit
 moveX = 0;
 
 
