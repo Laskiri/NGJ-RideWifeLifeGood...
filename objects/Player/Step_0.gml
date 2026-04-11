@@ -1,10 +1,9 @@
-
-
 // Handle stagger
 if (isStaggered) {
     staggerTime -= 1;
     if (staggerTime <= 0) {
         isStaggered = false;
+        isPunching = false;
     }
     
     velocity_y += grav_y

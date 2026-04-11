@@ -10,20 +10,24 @@ var hitPlayer = instance_place(x, y, Player);
 if (hitPlayer != noone && hitPlayer != owner && ds_list_find_index(hasHit, hitPlayer) == -1) {
     ds_list_add(hasHit, hitPlayer);
     
-    // Store owner reference before with block
     var punch_owner = owner;
     
     with (hitPlayer) {
-        isStaggered = true;
-        staggerTime = 30;
-        isPunching = false;
+        var defending = isBlocking;
         
-        if (punch_owner.x < x) {
-            velocity_y = -8;
-            velocity_x = 5;
-        } else {
-            velocity_y = -8;
-            velocity_x = -5;
+        if (!defending) {
+            // Normal stagger
+            isStaggered = true;
+            staggerTime = 30;
+            isPunching = false;
+            
+            if (punch_owner.x < x) {
+                velocity_y = -8;
+                velocity_x = 5;
+            } else {
+                velocity_y = -8;
+                velocity_x = -5;
+            }
         }
     }
 }

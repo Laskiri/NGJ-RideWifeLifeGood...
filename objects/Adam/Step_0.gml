@@ -1,13 +1,13 @@
 if (global.game_state != "fight") exit
-// Stagger animation - check FIRST before anything else
-show_debug_message("isStaggered: " + string(isStaggered));
-show_debug_message("Current sprite: " + sprite_get_name(sprite_index));
 
 event_inherited()
 
+// If staggered, only handle stagger sprite - don't process input
 if (isStaggered) {
     sprite_index = sprAdamStag
     image_index = 0
+    isBlocking = false;
+    exit; 
 } else if (sprite_index == sprAdamStag) {
     sprite_index = sprAdamIdle
     image_index = 0
@@ -15,32 +15,59 @@ if (isStaggered) {
 
 // Horizontal Movement 
 xMove = 0
-if (keyboard_check(ord(moveRightButton))){
+var moveDir = 0;
+var movingRight = keyboard_check(ord(moveRightButton));
+var movingLeft = keyboard_check(ord(moveLeftButton));
+
+if (movingRight) {
     xMove += moveSpeed
+    moveDir = 1;
 }
-if (keyboard_check(ord(moveLeftButton))){
+if (movingLeft) {
     xMove += -moveSpeed
+    moveDir = -1;
 }
-if(xMove != 0){
-    
-    var dir = sign(xMove)
-    image_xscale = baseScale * dir
-    x += xMove
-    if (sprite_index != sprAdamWalk && !isPunching && !isJumping) {
-        sprite_index = sprAdamWalk
-        image_index = 0
-    }
-    
-}
-else {
-    if (sprite_index != sprAdamIdle && !isPunching && !isJumping) {
-        sprite_index = sprAdamIdle
-        image_index = 0
+
+// Face opponent
+if (instance_exists(Eve)) {
+    var dirToEve = sign(Eve.x - x);
+    if (dirToEve != 0) {
+        image_xscale = baseScale * dirToEve;
     }
 }
 
+// Check if blocking - RESET FIRST
+isBlocking = false;  // Reset every frame
+if (instance_exists(Eve)) {
+    var dirToEve = sign(Eve.x - x);
+    
+    // Block if holding both left and right
+    if (movingLeft && movingRight) {
+        isBlocking = true;
+        xMove = 0;  // Don't move
+    }
+    // OR block if moving away from opponent
+    else if (moveDir != 0 && moveDir != dirToEve) {
+        isBlocking = true;
+    }
+}
+
+x += xMove;
+
+// Update sprite
+if (isBlocking && !isPunching) {
+    sprite_index = sprAdamBlock;
+    image_index = 0;
+} else if (xMove != 0 && !isPunching && !isBlocking) {
+    sprite_index = sprAdamWalk
+    image_index = 0;
+} else if (!isPunching && !isBlocking) {
+    sprite_index = sprAdamIdle
+    image_index = 0;
+}
+
 // Jumping
-if (keyboard_check_pressed(ord("W")) && onGround && !isPunching) {
+if (keyboard_check_pressed(ord("W")) && onGround && !isPunching && !isBlocking) {
     isJumping = true
     velocity_y = jumpPower
     sprite_index = sprAdamJump
@@ -48,7 +75,7 @@ if (keyboard_check_pressed(ord("W")) && onGround && !isPunching) {
 }
 
 // Punch with hitbox creation
-if (keyboard_check_pressed(ord("E")) && !isPunching && !isStaggered) {
+if (keyboard_check_pressed(ord("E")) && !isPunching && !isStaggered && !isBlocking) {
     if (isJumping && image_index >= 3) {
         // Don't punch during landing
     } else {
@@ -69,4 +96,3 @@ if (isPunching && sprite_index == sprAdamPunch && !punchHitboxCreated) {
         punchHitboxCreated = true;
     }
 }
-
