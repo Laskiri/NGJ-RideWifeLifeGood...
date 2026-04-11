@@ -4,3 +4,4 @@ ground = layer_tilemap_get_id("Ground")
 isPunching = false
 isJumping = false
 jumpPower = -45;
+onGround = false

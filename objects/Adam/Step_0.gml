@@ -1,31 +1,10 @@
-// Check if on ground
-var onGround = place_meeting(x, y + 2, ground);
 
-if (onGround) {
-    isJumping = false
-    show_debug_message("colliding")
-} else {
-    velocity_y += grav_y
-    show_debug_message("Not colliding")
-}
+event_inherited()
 
-// Move manually and check for collision
-show_debug_message(velocity_y,y)
-y += velocity_y
-
-// If we hit the ground, push back up
-if (place_meeting(x, y, ground)) {
-    while (place_meeting(x, y, ground)) {
-        y -= 1
-    }
-    velocity_y = 0
-    isJumping = false
-}
-
-// Jump
 if (keyboard_check_pressed(ord("W")) && onGround && !isPunching) {
     isJumping = true
     velocity_y = jumpPower
+    show_debug_message(velocity_y)
     sprite_index = sprAdamJump
     image_index = 0
 }
