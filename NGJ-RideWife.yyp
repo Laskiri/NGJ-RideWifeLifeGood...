@@ -30,6 +30,8 @@
   "name":"NGJ-RideWife",
   "resources":[
     {"id":{"name":"Adam","path":"objects/Adam/Adam.yy",},},
+    {"id":{"name":"Eve","path":"objects/Eve/Eve.yy",},},
+    {"id":{"name":"Player","path":"objects/Player/Player.yy",},},
     {"id":{"name":"Fighting","path":"rooms/Fighting/Fighting.yy",},},
     {"id":{"name":"Platformer","path":"rooms/Platformer/Platformer.yy",},},
     {"id":{"name":"invisible_Tiles","path":"sprites/invisible_Tiles/invisible_Tiles.yy",},},
@@ -38,6 +40,7 @@
     {"id":{"name":"sprAdamPunch","path":"sprites/sprAdamPunch/sprAdamPunch.yy",},},
     {"id":{"name":"sprAdamWalk","path":"sprites/sprAdamWalk/sprAdamWalk.yy",},},
     {"id":{"name":"sprBackground","path":"sprites/sprBackground/sprBackground.yy",},},
+    {"id":{"name":"sprEveIdle","path":"sprites/sprEveIdle/sprEveIdle.yy",},},
     {"id":{"name":"Sprite5","path":"sprites/Sprite5/Sprite5.yy",},},
     {"id":{"name":"TileSet2","path":"tilesets/TileSet2/TileSet2.yy",},},
   ],
