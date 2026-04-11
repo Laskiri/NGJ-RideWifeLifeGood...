@@ -1,3 +1,4 @@
+if (global.game_state != "fight") exit
 // Inherit the parent event
 event_inherited();
 

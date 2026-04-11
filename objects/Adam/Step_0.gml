@@ -1,4 +1,4 @@
-
+if (global.game_state != "fight") exit
 // Stagger animation - check FIRST before anything else
 show_debug_message("isStaggered: " + string(isStaggered));
 show_debug_message("Current sprite: " + sprite_get_name(sprite_index));
