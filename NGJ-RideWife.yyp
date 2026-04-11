@@ -16,6 +16,7 @@
     {"$GMFolder":"","%Name":"Platformer","folderPath":"folders/Rooms/Platformer.yy","name":"Platformer","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Sounds","folderPath":"folders/Sounds.yy","name":"Sounds","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Sprites","folderPath":"folders/Sprites.yy","name":"Sprites","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Adam","folderPath":"folders/Sprites/Adam.yy","name":"Adam","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Eve","folderPath":"folders/Sprites/Eve.yy","name":"Eve","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
   "ForcedPrefabProjectReferences":[],
@@ -29,7 +30,9 @@
   "resources":[
     {"id":{"name":"Fighting","path":"rooms/Fighting/Fighting.yy",},},
     {"id":{"name":"Platformer","path":"rooms/Platformer/Platformer.yy",},},
+    {"id":{"name":"sprIdle","path":"sprites/sprIdle/sprIdle.yy",},},
     {"id":{"name":"Sprite1","path":"sprites/Sprite1/Sprite1.yy",},},
+    {"id":{"name":"sprWalk","path":"sprites/sprWalk/sprWalk.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
