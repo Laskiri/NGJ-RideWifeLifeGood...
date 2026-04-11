@@ -41,6 +41,7 @@
     {"id":{"name":"sprAdamWalk","path":"sprites/sprAdamWalk/sprAdamWalk.yy",},},
     {"id":{"name":"sprBackground","path":"sprites/sprBackground/sprBackground.yy",},},
     {"id":{"name":"sprEveIdle","path":"sprites/sprEveIdle/sprEveIdle.yy",},},
+    {"id":{"name":"sprEvePunch","path":"sprites/sprEvePunch/sprEvePunch.yy",},},
     {"id":{"name":"Sprite5","path":"sprites/Sprite5/Sprite5.yy",},},
     {"id":{"name":"TileSet2","path":"tilesets/TileSet2/TileSet2.yy",},},
   ],

@@ -6,7 +6,7 @@ if (!onGround){
 }
 
 // Move manually and check for collision
-show_debug_message(velocity_y,y)
+
 y += velocity_y
 
 // If we hit the ground, push back up

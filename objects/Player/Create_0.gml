@@ -5,3 +5,4 @@ isPunching = false
 isJumping = false
 jumpPower = -45;
 onGround = false
+hSpeed = 0

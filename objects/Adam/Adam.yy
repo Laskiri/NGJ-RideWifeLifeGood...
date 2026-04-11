@@ -33,7 +33,7 @@
   "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
-  "solid":true,
+  "solid":false,
   "spriteId":{
     "name":"sprAdamIdle",
     "path":"sprites/sprAdamIdle/sprAdamIdle.yy",

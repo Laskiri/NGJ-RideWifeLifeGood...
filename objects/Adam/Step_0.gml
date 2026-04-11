@@ -4,7 +4,6 @@ event_inherited()
 if (keyboard_check_pressed(ord("W")) && onGround && !isPunching) {
     isJumping = true
     velocity_y = jumpPower
-    show_debug_message(velocity_y)
     sprite_index = sprAdamJump
     image_index = 0
 }
