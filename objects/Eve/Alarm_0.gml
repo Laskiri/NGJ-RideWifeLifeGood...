@@ -1,0 +1,1 @@
+takeDamageCoolDown = false

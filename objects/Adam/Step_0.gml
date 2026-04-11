@@ -6,6 +6,12 @@ show_debug_message("Current sprite: " + sprite_get_name(sprite_index));
 event_inherited()
 
 if (isStaggered) {
+    if (!takeDamageCoolDown) {
+        hp -= 1
+        takeDamageCoolDown = true
+        AdamHP.image_index += 1
+        alarm[0] = 120
+    }
     sprite_index = sprAdamStag
     image_index = 0
 } else if (sprite_index == sprAdamStag) {

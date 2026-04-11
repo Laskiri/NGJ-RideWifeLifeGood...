@@ -14,3 +14,4 @@ retreatRange = 200;
 baseScale = 7
 moveSpeed = 4
 punchHitboxCreated = false;
+takeDamageCoolDown = false
